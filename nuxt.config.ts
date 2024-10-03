@@ -8,10 +8,14 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxt/content",
   ],
-  ssr: false,
-  hooks: {
-    "prerender:routes"({ routes }) {
-      routes.clear(); // Do not generate any routes (except the defaults)
+  content: {
+    sources: {
+      posts: {
+        driver: "github",
+        repo: "SpaceShaman/blog-posts",
+        branch: "master",
+        token: process.env.GITHUB_TOKEN,
+      },
     },
   },
 });
