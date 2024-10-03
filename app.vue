@@ -19,4 +19,10 @@ useHead({
 .light-mode {
   @apply bg-light-bg-0-h text-light-fg;
 }
+a {
+  @apply text-light-primary dark:text-dark-primary;
+}
+a:hover {
+  @apply text-light-secondary dark:text-dark-secondary;
+}
 </style>
