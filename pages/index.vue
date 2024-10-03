@@ -11,8 +11,8 @@ useSeoMeta({
       <div v-for="article in list" :key="article._path">
         <a :href="article._path">
           <h2>{{ article.title }}</h2>
-          <p>{{ article.description }}</p>
         </a>
+        <p>{{ article.description }}</p>
       </div>
     </ContentList>
   </main>
